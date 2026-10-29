@@ -1,0 +1,3 @@
+Capturas de ejecución:
+- captura_pruebas.png: scripts/probar -> Pruebas ejecutadas: 30 | exitosas: 30 | fallidas: 0
+- captura_demo.png: scripts/ejecutar --demo -> RESULTADO: todos los casos de aceptación CUMPLEN.
