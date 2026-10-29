@@ -14,3 +14,4 @@ Base: la versión con paquetes `uta.*`. Se incorporaron las mejoras de la otra v
 | 8 | Demo: causa del rechazo de FISEI, duplicado en minúsculas, ciclo al reubicar y preorden tras cada eliminación | `app/Demo.java` | Salidas trazables |
 | 9 | 9 pruebas nuevas (22–30): causas de rechazo, mayúsculas/espacios, sangría exacta, conversión completa, forma exacta tras cada eliminación, promedio tras modificar, matrícula no positiva, 15 claves (15 vs 4 comparaciones), órdenes de inserción, validación con más de 16 unidades | `PruebasRunner.java` | Aserciones exactas que detectan errores de forma |
 | 10 | README, diagramas del ABB inicial y final, ruta de pruebas y espacio para capturas | `README.md`, `docs/` | Documentación exigida |
+| 11 | README final con integrantes, ramas, revisores, operación que defiende cada uno y capturas de `probar` (30/30) y `ejecutar --demo` | `README.md`, `docs/capturas/` | Evidencia de contribuciones y de ejecución |
