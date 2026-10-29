@@ -20,7 +20,7 @@ auditoría, análisis de búsqueda y pruebas automatizadas. Java 17+, sin `TreeM
 
 Las salidas de referencia están en `docs/salida_pruebas.txt` (30/30) y `docs/salida_demo.txt`. Los cambios posteriores a la auditoría están en [docs/CAMBIOS.md](docs/CAMBIOS.md).
 
-**Capturas:** agregar en `docs/capturas/` las capturas de `probar` y `ejecutar --demo` tomadas en el equipo de un integrante.
+**Capturas:** en `docs/capturas/`: [`captura_pruebas.png`](docs/capturas/captura_pruebas.png) (30/30 pruebas exitosas) y [`captura_demo.png`](docs/capturas/captura_demo.png) (todos los casos de aceptación cumplen).
 
 ## Estructura
 ```
@@ -77,16 +77,29 @@ El ABB **no se autoequilibra**: la diferencia entre ambos árboles del análisis
 4. **Hijo-izquierdo/hermano-derecho**: se conserva la relación padre-hijo (vía el primer hijo) y el orden entre hermanos (vía el enlace derecho). Error a evitar: leer el enlace derecho como "hijo" o asumir que altura/nivel del binario coinciden con los del general (aquí 3 vs 4).
 5. **Evidencia en GitHub**: ramas por integrante, commits propios, PR revisada, y diffs que muestran quién escribió y probó cada parte (ver `docs/GITHUB.md`).
 
-## Tabla de contribuciones (completar con evidencia de GitHub)
-| Integrante | Rama | Commits / PR | Parte implementada y probada | Operación a defender |
+## Integrantes y contribuciones
+
+Repositorio: <https://github.com/Kerly717/PRUEBA-PR-CTICA-GRUPAL-RBOLES-EN-JAVA>. El reparto detallado y los comandos están en [docs/GITHUB.md](docs/GITHUB.md).
+
+| # | Integrante | Rama | Archivos a cargo | Revisa la PR de | PR (enlace) |
+|---|---|---|---|---|---|
+| 1 | Espinoza Reyes Kerly Margoth | `feature/kerly-arbol-general` | `general/NodoGeneral`, `general/ArbolGeneral`, scripts, `.vscode`, `.gitignore`, `docs/GITHUB.md` | Gabriel | por completar |
+| 2 | Jijón Viscaino Gabriel Sebastián | `feature/gabriel-abb` | `abb/Estudiante`, `abb/NodoABB`, `abb/ResultadoBusqueda`, `abb/ArbolABB` | Kerly | por completar |
+| 3 | Gamboa Araujo Rommel Fabricio | `feature/rommel-conversion-auditoria` | `general/NodoHH`, `general/ConversorHijoHermano`, `app/DatosIniciales`, `app/Auditoria`, `docs/diagramas.md` | Italo | por completar |
+| 4 | Manobanda Puaquiza Italo Esteban | `feature/italo-analisis-menu` | `analisis/AnalisisBusqueda`, `app/Demo`, `app/Main` | Jonathan | por completar |
+| 5 | Tenorio Ronquillo Jonathan Sebastián | `feature/jonathan-pruebas-docs-final` | `pruebas/PruebasRunner`, `docs/salida_*.txt`, `docs/CAMBIOS.md`, `docs/capturas/`, este README | Rommel | por completar |
+
+Cada integrante sube sus archivos con commits hechos desde su propia cuenta de GitHub. La columna "Revisa la PR de" indica quién revisa la PR de esa fila; el revisor deja al menos un comentario y aprueba antes de fusionar.
+
+| Integrante | Operación que defiende | Caso base | Prueba de fallo | Complejidad |
 |---|---|---|---|---|
-|  |  |  |  |  |
-|  |  |  |  |  |
-|  |  |  |  |  |
+| Kerly | `ArbolGeneral.eliminarDetallado` (borrado seguro) | `buscar(null)` devuelve `null` | 05 y 22: eliminar FISEI → `TIENE_HIJOS` | O(n) |
+| Gabriel | `ArbolABB.eliminar` con dos hijos (sucesor inorden) | `nodo == null` devuelve `null` | 14: eliminar 70 → 75 ocupa su lugar | O(h) |
+| Rommel | `ConversorHijoHermano.convertir` | nodo sin hijos: `primerHijo = null` | 09 y 25: UTA → FISEI → FCHE → FCS | O(n) |
+| Italo | `AnalisisBusqueda.medio` y `ArbolABB.buscarContando` | `ini > fin` | 28: 15 claves, 15 vs 4 comparaciones | O(n) vs O(log n) |
+| Jonathan | `PruebasRunner` y consistencia del promedio | ABB vacío: promedio 0 | 26: preorden exacto tras cada eliminación | O(n) por recorrido |
 
-> Solo registren aportes que estén respaldados por commits propios en el repositorio.
-
-**URL del repositorio:** por completar  
-**Hash del último commit:** por completar  
-**PR revisada:** por completar  
+**URL del repositorio:** https://github.com/Kerly717/PRUEBA-PR-CTICA-GRUPAL-RBOLES-EN-JAVA  
+**Hash del último commit:** se informa en la entrega (`git rev-parse HEAD` en `main` después de la última fusión)  
+**PR revisadas:** por completar  
 **Ruta de pruebas:** `src/test/java/uta/pruebas/PruebasRunner.java` (salida en `docs/salida_pruebas.txt`)
