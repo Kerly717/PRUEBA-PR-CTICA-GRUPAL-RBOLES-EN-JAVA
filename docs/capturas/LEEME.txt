@@ -1,0 +1,1 @@
+Coloque aquí las capturas de pantalla de scripts/probar y scripts/ejecutar --demo.
