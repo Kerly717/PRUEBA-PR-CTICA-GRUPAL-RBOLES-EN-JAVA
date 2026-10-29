@@ -1,0 +1,32 @@
+[OK]    01 Jerarquía inicial válida (9 nodos, 5 hojas, altura 3, grado FISEI 2, nivel 3B 3)
+[OK]    02 Código duplicado rechazado
+[OK]    03 Padre inexistente / datos nulos o vacíos rechazados
+[OK]    04 Jerarquía inválida: ciclo rechazado al reubicar
+[OK]    05 Eliminar FISEI con descendencia: rechazo y jerarquía sin cambios
+[OK]    06 Eliminar hoja permitido; raíz e inexistente rechazados
+[OK]    07 Árbol general vacío: sin excepciones y métricas coherentes
+[OK]    08 Raíz única (singleton): altura 0, 1 nodo, 1 hoja
+[OK]    09 Transformación hijo-izquierdo / hermano-derecho y reconstrucción
+[OK]    10 ABB tras 12 inserciones: inorden esperado, invariante válido
+[OK]    11 Insertar duplicado 40: rechazado y conteo preservado (12)
+[OK]    12 Modificar 35 sin cambiar matrícula; datos inválidos rechazados
+[OK]    13 Eliminar 20, 60 y 70: inorden esperado y 9 nodos
+[OK]    14 Eliminación con dos hijos usa el sucesor inorden (70 -> 75)
+[OK]    15 ABB vacío: sin excepciones y métricas coherentes
+[OK]    16 ABB con un solo nodo: altura 0, hoja, min = max
+[OK]    17 Consistencia del promedio antes y después de eliminar
+[OK]    18 Mínimo, máximo, altura y hojas del ABB inicial
+[OK]    19 Sin datos codificados: otras matrículas (el docente puede cambiarlas en vivo)
+[OK]    20 Estudiante inválido lanza IllegalArgumentException
+[OK]    21 Búsqueda: cadena O(n) vs balanceado O(log n)
+[OK]    22 Causa del rechazo al agregar y eliminar unidades
+[OK]    23 Unicidad sin distinguir mayúsculas ni espacios
+[OK]    24 Jerarquía impresa con sangría exacta
+[OK]    25 Conversión completa: SOFTWARE -> 3A -> 3B, hermano TI -> 4A
+[OK]    26 Forma exacta del ABB tras eliminar 20, 60 y 70 (preorden en cada paso)
+[OK]    27 Promedio tras modificar 35 y matrícula no positiva rechazada
+[OK]    28 Búsqueda con 15 claves: cadena 15 comparaciones, equilibrado 4
+[OK]    29 Orden de inserción por punto medio y ascendente (arreglos)
+[OK]    30 Validación de jerarquía con más de 16 unidades y tras reubicar
+
+Pruebas ejecutadas: 30 | exitosas: 30 | fallidas: 0
